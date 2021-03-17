@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- EXternal JS script <script src="myScript.js"></script>   
+    Adding a comment: JavaScript is the programming language of HTML and the web.-->
+    <Title>This is a JavaScript tutorial</Title>
+    <!--Placing scripts like the one below at the bottom of the body element improves the display speed
+    because script interpretation slows down the display-->
+    <!--
+    <script>
+        function myFunction(){
+            document.getElementById('demo6').innerHTML = 'My last Name is Nnodim.';
+        }
+    </script> -->
+    <!--REVIEW CONSOLE IN BROWSER TO TEST ALL CONSOLE.LOG CODES.-->
+    <style>
+        h3:hover,
+        button:hover {
+            color: red;
+        }
+
+        .site-container {
+            border-style: hidden;
+            border-width: 1px;
+            margin: 0 auto;
+        }
+
+        .tab tr:nth-child(even) {
+            background-color: lightgray
+        }
+
+        .tab tr:nth-child(odd) {
+            background-color: white
+        }
+        
+        h2{
+            color:maroon;
+            font-style: oblique;
+            font-size:x-large;
+        }
+        h2:hover,
+        button:hover{
+
+            color:rgb(64, 243, 28);
+            }
+        }
+    </style>
+
+</head>
+
+<div class="site-container">
+
+    <body>
+        <hr>
+        <h2>Writing my first JavaScript code</h2>
+        <h2>THIS IS VERSION 2 OF MY WEBSITE</h2>
+
+        <p> One of many JavaScript HTML methods is getElementById(). This uses </p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click this button to display
+            the
+            date and time.
+        </button>
+        <p id="demo"></p>
+        <p>One of many JavaScript HTML methods is getElementById()</p>
+
+        <p id="demo2">JavaScript can change HTML content.</p>
+        <button type="button" onclick='document.getElementById("demo2").innerHTML = "Hello JavaScript"' ;>Click
+            me!</button>
+        <!--JavaScript accepts both double and single quotes-->
+
+        <p>JavaScript can change HTML attribute values</p>
+        <button type="button" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the
+            light</button>
+
+        <img id="myImage" src="pic_bulboff.gif" style="width:100px"> </img>
+
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+        <p id="demo3">JavaScript can change the style of an HTML element.</p>
+        <button onclick="document.getElementById('demo3').style.fontSize='30px'">Click me for a larger font!</button>
+
+        <p id="demo4" style="color:crimson" ;>Hiding HTML elements can be done by changing the display style</p>
+        <p id="demo5" style="display:none">Showing hidden HTML elements can also be done by changing the display style.
+        </p>
+
+        <button type="button" onclick="document.getElementById('demo4').style.display='none'">Click to hide the
+            text</button>
+        <button type="button" onclick="document.getElementById('demo5').style.display='block'">Click reveal the hidden
+            text</button>
+        <hr>
+        <!-- In HTML, a JavaScript code must me inserted between <script> and </script> tags. JavaScript is the defaul scripting language in HTMl 
+    A JavaScript function is a block of JavaScript code, that can be executed when "called" for.
+    A function can be called when an event occurs, like when the user clicks a button.
+    Any number of scripts can be placed in the <body> or <head> section of an HTML page
+-->
+        <script>
+            function myFunction2() {
+                document.getElementById('demo6').innerHTML = 'My last name is Nnodim.';
+            }
+        </script>
+        <p id="demo6">My first name is ENTERYOURFIRSTNAME</p> 
+        <button type="button" onclick="myFunction2()">And!</button>
+        <!--External scripts are practical when the same code is used in many different web pages
+    To use an external script, put the name of the script file in the src (source) attribute of a <script> tag:
+    External scripts can be referenced with a full URL or with a path relative to the current web page.
+    EX:<script src="myScript.js"></script>. External scirpts cannot contain <script> tags
+    Using external files helps seperate HTML and code, it makes HTML and Javascript easier to read and maintain and speeds up page loads.   
+-->
+
+        <p>javaScript can "Display" data in different ways</p>
+
+        <ul>
+            <li>Writing into an HTMl element, using <b>innerHTML</b></li>
+            <li>Writing into the HTML output using <b>document.write()</b></li>
+            <li>Writing into an alrt box, using <b>window.alert()</b></li>
+            <li>Writing into the browser console, using <b>console.log()</b></li>
+        </ul>
+        <p>To access an HTML element, Javascript can use the document.getElementById('id') method.
+            The id attribute defines the HTML element. The innerHTMl property defines the HTMl content.
+            Changing the innerHTML property of an HTML element is a common way to display data in HTML.
+        </p>
+        <p id="example"></p>
+        <script>
+            document.getElementById('example').innerHTML = 9 * 4;
+        </script>
+
+        <script>
+            document.write(2 * 10);
+        </script>
+
+        <p>Using document.write() after an HTML document is loaded, will delete all existing HTML.
+            document.write() method should only be used for testing
+        </p>
+        <button type="button" onclick="document.write(9+9)">This button deletes all HTML document</button>
+
+        <p>You can use an alert box to display data by declaring window.alert() </p>
+        <!--<script>window.alert("This is a safe website click OK or enter to continue to the site.")</script>-->
+
+        <p>For debugging purposes, you can use the console.log() method to display data.
+            <b> Activate debugging by pressing F12 on your keyboard then Select "Console" in the debugger menu</b>
+        </p>
+        <script>
+                console.log(0 * 5);
+                console.log("This message will display in your console automatically. Make sure to store your code in a script tag in order to use console.log ");
+                var ck
+                ck = (2*5);
+                var wk = ("Emmanuel");
+        </script>
+        
+        <h3>JavaScript Statements</h3>
+
+        <p>A JavaScript program is a list of programming statements. In HTML, JavaSCript programs are executed by the
+            web browser.
+            JavaSCript programs (and JavaScript statements) are often called JavaScript code.
+            <p id="ex2"></p>
+            <p id="ex3"></p>
+        </p>
+
+        <script>
+            var x, y, z
+            x = 9
+            y = 2
+            z = x + y;
+            document.getElementById("ex2").innerHTML = "The value of z is" + z + ".";</script>
+
+        <p>JavaSCript statemens are composed of: Values, Operators, Expressions, Keywords, and comments.
+            The statement below tells the browser to write "Hello Dolly." inside an HTML element with id="ex3".
+        </p>
+        <script>
+            document.getElementById("ex3").innerHTML = "Hello people";
+        </script>
+
+        <p>Semicolons seperate JavaSCript statements. Add a semicolons at the end of each executable statement it's not
+            required but highly recommended.
+            With semicolons multiple statements on one line is allowed. JavaScript ignores white spaces but you can add
+            white
+            spaces to make your script more readable. Put spaces around operators(= + - * /)
+            <p id="ex4"> </p>
+        </p>
+
+        <script>
+            var a, b, c;
+            a = 5; b = 9;
+            c = 1;
+            d = a + b + c;
+            document.getElementById("ex4").innerHTML = "The answer is " + d;
+        </script>
+        <p>For the best readability, programmers often like to avoid code lines longer than 80 characters.
+            The best place to break a lone script line is after an operator. JavaScript statements can be grouped
+            together in code blocks,
+            inside curly brackets by using a semicolon{....} Ex:
+            <!-- <script> function myFunction() {
+                document.getElementById("demo1").innerHTML = "Hello Dolly!";
+                document.getElementById("demo2").innerHTML = "How are you?";
+              } </script>-->
+        </p>
+        <h3>JavaScript Keywords</h3>
+        <p>JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
+        <table class="tab">
+            <tr>
+                <th>Keyword</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>break</td>
+                <td>Terminates a switch or a loop</td>
+            </tr>
+            <tr>
+                <td>Continue</td>
+                <td>Jumps out of a loop and starts at the top</td>
+            </tr>
+            <tr>
+                <td>debugger</td>
+                <td>Stops the execution of JavaScript, and calls (if available) the debugging function</td>
+            </tr>
+            <tr>
+                <td>do while</td>
+                <td>Executes a block of statements, and repeats the block, while a condition is true </td>
+            </tr>
+            <tr>
+                <td>for</td>
+                <td>Marks a block of statements to be executed, as long as a condition is true</td>
+            </tr>
+            <tr>
+                <td>function</td>
+                <td>Declares a function</td>
+            </tr>
+            <tr>
+                <td>if else</td>
+                <td>Marks a block of statements to be executed, depending on a condition</td>
+            </tr>
+            <tr>
+                <td>return</td>
+                <td>Exists a function</td>
+            </tr>
+            <tr>
+                <td>switch</td>
+                <td>Marks a block of statements to be executed, depending on different cases </td>
+            </tr>
+            <tr>
+                <td>try catch</td>
+                <td>implements error handling to a block of statements</td>
+            </tr>
+            <tr>
+                <td>var</td>
+                <td>Declares a variable </td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>Exponentiation</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Modulus</td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>equal value and equal type</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>ternary operator</td>
+            </tr>
+            <tr>
+                <td>typeof</td>
+                <td>Returns true if an onject is an instance of an object type</td>
+            </tr>
+            <tr>
+                <td>onchange</td>
+                <td>An HTML element has been changed</td>
+            </tr>
+            <tr>
+                <td>onclick</td>
+                <td>The user clicks an HTML element</td>
+            </tr>
+            <tr>
+                <td>onmouseover / onmouseout</td>
+                <td>The user moves the mouse over or away from an HTML element</td>
+            </tr>
+            <tr>
+                <td>onkeydown</td>
+                <td>The user pushes a keyboard key</td>
+            </tr>
+            <tr>
+                <td>\n</td>
+                <td>New Line</td>
+            </tr>
+            <tr>
+                <td>NaN</td>
+                <td>Not a number</td>
+            </tr>
+
+        </table>
+
+        <p>With <b>JavaScript literals</b> Numbers are written with or without decimals and strings are text written
+            within double or single quotes
+            The var keyword is used to declare variables, an equal sign is used to assign values to variables. EX:
+            For comments in JAvaSCript use // or /* */
+            <!--var x;
+            x = 6;
+        
+            var x, y;
+            x = 5 + 6;
+            y = x * 10;
+             -->
+        </p><br>
+
+        <p>JavaScript Identifiers are names. All JavaScript identifiers are case sensitive
+            Hyphens like <b>first-name</b> are not allowed in JavaScript. They are reserved for subtractions
+            Upper camel case like <b>FirstName</b> lower camel case and underscore are allowed.
+        </p>
+        <p id="ex5"></p>
+        <script>
+            var lastname, lastName;
+            lastname = 'Doe'
+            lastName = 'Peterson'
+            document.getElementById("ex5").innerHTML = lastname + " " + lastName;
+        </script>
+
+        <p>JavaScript uses the Unicode character set. Unicode covers (almost) all the characters, punctuations, and
+            symbols in the world.
+            <a href="https://www.w3schools.com/charsets/default.asp" target="_blank">Complete Unicode Reference.<a />
+        </p>
+
+        <p>If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+            for example: var x = "5" + 2 + 3; will result in 523 but var x = 2 + 3 + "5"; will result in 55.
+            x ** y produces the same result as [Math.pow(5,2) = 25].
+        </p>
+
+        <p>When adding a number and a string, JavaScript will treat the number as a string.
+            When evaluating expresions JavaScript will treat preceding operands as a string if the first operand is a
+            string.
+            for example var x = "Volvo" + 16 + 4; will <b>result</b> in Volvo164 but var x = 16 + 4 + "Volvo"; will
+            <b>result</b> in 20Volvo.
+        </p>
+
+        <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string
+            EXAMPLE: var answer1 = "It's alright"; OR var answer2 = "He is called 'Johnny'";
+        </p>
+
+        <p>JavaScript arrays are written with square brackets.
+            EXAMPLE: var cars = ["Saab", "Volvo", "BMW"]; <b>REVIEW DATATYPES</b>
+        </p>
+
+        <p>JavaScript objects are written with curly braces {}.
+            EXAMPLE: var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+            The typeof operator returns the type of a variable or an expression. typeof "" //Returns "string"
+            Any variable can be emptied, by setting the value to undefined or null.
+        </p>
+
+        <p>A JavaScript function is a block of code designed to perform a particukar task.
+            A JavaScript function is executed when "something" invokes it (calls it).
+            Variables declared within a JavaScript function, become LOCAL to the function so
+            Local variables cannot be accessed from outside of the function.
+
+        </p>
+
+        <p id="ex6"></p>
+        <script>
+            function myFunction(p1, p2){
+                return p1 * p2;
+                var func = myFunction(p1,p2);
+                
+            }
+            document.getElementById("ex6").innerHTML = myFunction(4, 1);
+            
+        </script>
+        
+
+        <p>You can access object properties in two ways.
+            #1 objectName.propertyName #2 objectName["PropertyName"]
+            In a function definition, <b>this</b> refers to the owner of the function.
+            If you access a method without the () parentheses, it will return the function definition.
+            When a JavaScript variable is declared with the keyword "new", the variable is created as an object
+            The equality operator (==) will attempt to make the data types the same before proceeding. On the other hand, 
+            the identity operator (===) requires both data types to be the same, as a prerequisite.
+        </p>
+
+        <p>HTML events are things that happen to HTML elements. When JavaSCript is used in HTML pages, JavaScript can
+            react on these events.
+            Examples of HTML events include: An HTML web page has finished loading, An HTML input field was changed,
+            An HTML button was clicked.[ < element event="some JavaScript">]
+        </p>
+        <p id="ex7"></p>
+
+        <button onclick="document.getElementById('ex7').innerHTML = Date()">The time is </button><br>
+        <button onclick="this.innerHTML = Date()">What is the time</button>
+        <button onclick="displayDate()">Now the time is?</button>
+
+        <p> A JavaScript string is zero or more characters written inside quotes that is declared as a (var) you can use single or double quotes </p>
+        <p>To find the length of a string, use the built-in length property. The backslash (\) escape character turns special characters into string characters.
+            For example "It\"s alright.";<br>
+            The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string.
+            Both indexOf(), and lastIndexOf() return -1 if the text is not found.<br>
+            The search() method searches a string for a specified value and return the position of the match
+        </p><br>
+
+        <script>
+            var text ="ABCDEFGHIJKLMNOPQRSTUVWXYZ9";
+            var tln = text.length;
+            console.log(tln, 'is the text length'); //check your console to find out the text length
+            var inde = text.indexOf("M"); // finds the index of a character
+            console.log(inde);
+            var inde2 = text.lastIndexOf("Z");
+            console.log(inde2, 'this is the location of z');
+            var posi = text.search("J");
+            console.log(posi)
+            
+        </script>
+        <h2>Functions, Objects, Events, Strings, and Numbers. 
+        </h2>
+
+        <p>
+            For best readability, programmers often like to avoid code lines longer than 80 characters.
+            A safer way to break up a string, is to use string addition (+)
+            String slice() extracts a part of a string and returns the extracted part in a new string. This method takes
+            two parameters: the start position and the end position. Example str.slice(7, 13).
+            bubstring() is similar to slice() but it cannot accept negative indexes. The substr() method is also similar to the 
+            the slice() method but in substr() the second parameter specifies the length of the extracted part. 
+            The replace() method replaces a specific value with another value in a string.
+            A string is converted to upper case with toUpperCase() and likewise to lowercase with toLowerCase().
+            concat() joins two or more strings EX: text1.concat(" ", text2).
+            All string methods return a new string. They don't modify the original string.
+            Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+            The trim() method removes whitespace from both sides of a string.
+            The charAt() method returns the character at a specified index(position) in a string.
+            The charCodeAt() method returns the unicode of the character at a specified index in a string. 
+        </p>
+
+        <script>
+        var a = "Please visit his website";
+        var at = "     How do i remove white space  ";
+        var b = a.replace("his", "Emmanuel's");
+        var a2 = a.toUpperCase();
+        var a3 = at.trim()
+        var at2 = "ENTERYOURLASTNAME";
+        var a4 = at2.charCodeAt(1)
+        console.log(b + " " + a2 + " " + a3);
+        console.log('The unicode value of the text n is', a4);
+
+        </script>
+
+        <p>JavaScript will try to convert strings to numbers in all numeric operations. JavaScript uses the + operator to concatenate 
+            You can use the global JavaScript functions isNaN() to find out if a value is a number. Infinity is the value JavaScript will return if 
+            you calculate a number outside the largest possible number.
+            Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2. The toString() method returns a number as a string.
+            The toString() method returns a number as a string. toExponential() returns a string, with a number rounded and written using exponential notation
+            toFixed() returns a string, with the number written with a specified number of decimals. toFixed(2) is perfect for working with money.
+
+        </p>
+
+        <script>
+        console.log(typeof(4));
+        var myNumber = 2;
+        while (myNumber != Infinity){
+            myNumber = myNumber * myNumber;
+        console.log(myNumber);
+        }
+        var numb = 12.435646
+        var numb2 = numb.toFixed(2)
+        console.log(numb2)
+        </script>
+
+        <p>
+            JavaScript arrays are used to store multiple values in a single variable.
+            An Array can hold many values under a single name, and you can access the values by refering to an 
+            index number. You can access an array element by referring to the index number[0]. Array indexes start with 0.
+            [0] is the first element. [1] is the second element. You can change and add new values to an array by referencing the index.
+            JavaScript variables can be objects so You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array.
+            The length property is always one more than the highest array index.
+
+            
+        </p>
+
+        <script>
+            var cars = ["Chevrolet", "Volvo", "BMW", "Mercedes"];
+            console.log(cars);
+            var value = cars[2];
+            cars[4] = "Toyota";
+            var value2 = cars[cars.length -1];
+            console.log(value,'Is at index of 2', value2, "\"-1 gives you the last element in an array\" ");
+            console.log(cars[0]);
+            var person = {Firstname:"Jammie", Lastname:"Vardy"}
+            console.log(person.Lastname, person.Firstname);
+            var x = cars.length; // returns the number of elements
+            var y = cars.sort(); // The sort() method sorts arrays
+            console.log(x,'is the length',y,'sorting');
+
+        </script>
+
+        <h2>Looping Array Elements
+        </h2>
+
+        <p>
+            The Safest way to loop through an array, is using a for loop. Be <b>Careful</b> with loops so you don't end up with
+            an infinite loop. when writing loops You can also use the Array.forEach() function: from (JS Arrays).
+            The easiest way to add a new element to an array is using the puch() method. New elements can also be added using the length property.
+            In JavaScript, arrays use numbered indexes. In JavaScript, Objects use names indexes.
+
+        </p>
+        <p id = "fruit"></p>
+
+        <script>
+            var fruits, Flen, i, text;
+            fruits = ["Orange", "Apple", "pear", "Avacado", "Banana", "Grape", "Mango"];
+            fruits.push("Udara");
+
+            Flen = fruits.length;
+            var len = fruits.length
+            console.log(len, 'this is the total number of the fruits element')
+
+            text = "<ol>"
+            for (i = 0; i < fruits.length; i++) {
+                text += "<li>" + fruits[i] + "</li>";
+            }    
+            
+            text += "</ol>";
+            document.getElementById("fruit").innerHTML = text;
+            console.log(text)
+        </script>
+
+
+</div>
+</body>
+
+</html>
